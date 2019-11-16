@@ -1,3 +1,4 @@
+# edit: inet_ip local_listen
 cd
 yum install openvpn -y
 wget 'https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.5/EasyRSA-nix-3.0.5.tgz' -O ~/easyrsa.tgz
