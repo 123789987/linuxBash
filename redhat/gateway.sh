@@ -1,3 +1,4 @@
+# edit: ip dev
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sysctl -p
 route del default
