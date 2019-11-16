@@ -1,9 +1,5 @@
-# edit: ip dev
+# edit: dev
 echo 1 > /proc/sys/net/ipv4/ip_forward
-sysctl -p
-route del default
-route add default gw 192.168.100.154
-route add default gw 192.168.122.1 dev ens3
 systemctl enable firewalld
 systemctl start firewalld
 firewall-cmd --permanent --zone=public --add-masquerade
