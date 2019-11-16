@@ -1,8 +1,4 @@
 cd
-yum install wget -y
-wget https://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/e/epel-release-8-7.el8.noarch.rpm
-rpm -Uvh epel-release-8-7.el8.noarch.rpm
-yum update -y
 yum install openvpn -y
 wget 'https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.5/EasyRSA-nix-3.0.5.tgz' -O ~/easyrsa.tgz
 tar xzf ~/easyrsa.tgz -C ~/
@@ -45,7 +41,7 @@ yum install iptables -y
 yum install policycoreutils-python-utils -y
 
 echo 1 > /proc/sys/net/ipv4/ip_forward
-iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to 172.31.8.187
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 ! -d 10.8.0.0/24 -j SNAT --to 172.31.*.*
 iptables -I INPUT -p udp --dport 443 -j ACCEPT
 iptables -I FORWARD -s 10.8.0.0/24 -j ACCEPT
 iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
