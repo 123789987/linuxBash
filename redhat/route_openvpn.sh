@@ -14,3 +14,4 @@ firewall-cmd --direct --permanent --add-rule ipv4 filter INPUT 0 --in-interface 
 firewall-cmd --reload
 echo '192.168.100.0/24 via 10.8.0.1' > /etc/sysconfig/network-scripts/route-ens4
 nmcli con reload
+echo 'nameserver 10.8.0.1' > /etc/resolv.conf
