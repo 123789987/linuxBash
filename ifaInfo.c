@@ -21,7 +21,7 @@
 #include <arpa/inet.h>
 #include <errno.h>
 
-int main() {
+int main(int argc, char **argv) {
   struct ifaddrs *ifa;
   char addr[50];
 
