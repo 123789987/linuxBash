@@ -1,8 +1,8 @@
 # edit: inet_ip local_listen
 cd
 yum install wget -y
-wget https://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/Packages/e/epel-release-8-7.el8.noarch.rpm
-rpm -Uvh epel-release-8-7.el8.noarch.rpm
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+rpm -ivh epel-release-latest-8.noarch.rpm
 yum install openvpn -y
 wget 'https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.5/EasyRSA-nix-3.0.5.tgz' -O ~/easyrsa.tgz
 tar xzf ~/easyrsa.tgz -C ~/
